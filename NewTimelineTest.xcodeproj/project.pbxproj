@@ -17,6 +17,7 @@
 		B7C433582331012000B1722B /* StoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C433572331012000B1722B /* StoriesCell.swift */; };
 		B7C4335A2331015200B1722B /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C433592331015200B1722B /* TextCell.swift */; };
 		B7C4335C2331019E00B1722B /* TitleSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4335B2331019E00B1722B /* TitleSupplementaryView.swift */; };
+		B7C4335E23310AF300B1722B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4335D23310AF300B1722B /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B7C433572331012000B1722B /* StoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCell.swift; sourceTree = "<group>"; };
 		B7C433592331015200B1722B /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		B7C4335B2331019E00B1722B /* TitleSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSupplementaryView.swift; sourceTree = "<group>"; };
+		B7C4335D23310AF300B1722B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		C93AB46208D6224C61143292 /* Pods-NewTimelineTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewTimelineTest.debug.xcconfig"; path = "Target Support Files/Pods-NewTimelineTest/Pods-NewTimelineTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				B7C433572331012000B1722B /* StoriesCell.swift */,
 				B7C433592331015200B1722B /* TextCell.swift */,
 				B7C4335B2331019E00B1722B /* TitleSupplementaryView.swift */,
+				B7C4335D23310AF300B1722B /* DataSource.swift */,
 				B7C433472330D51300B1722B /* Main.storyboard */,
 				B7C4334A2330D51500B1722B /* Assets.xcassets */,
 				B7C4334C2330D51500B1722B /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C4335E23310AF300B1722B /* DataSource.swift in Sources */,
 				B7C433462330D51300B1722B /* ViewController.swift in Sources */,
 				B7C433582331012000B1722B /* StoriesCell.swift in Sources */,
 				B7C4335A2331015200B1722B /* TextCell.swift in Sources */,

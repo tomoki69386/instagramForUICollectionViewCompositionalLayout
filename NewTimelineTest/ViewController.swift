@@ -12,6 +12,7 @@ import IBPCollectionViewCompositionalLayout
 class ViewController: UIViewController {
     
     private var collectionView: UICollectionView! = nil
+    private lazy var dataSource = DataSource(with: self.collectionView)
     static let gridSectionHeaderElementKind = "grid-section-header-element-kind"
     static let listSectionHeaderElementKind = "list-section-header-element-kind"
 
@@ -85,7 +86,6 @@ extension ViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .systemBackground
-        collectionView.dataSource = self
         collectionView.register(TextCell.self, forCellWithReuseIdentifier: TextCell.reuseIdentifier)
         collectionView.register(StoriesCell.self, forCellWithReuseIdentifier: StoriesCell.reuseIdentifier)
         collectionView.register(TitleSupplementaryView.self,
@@ -95,44 +95,7 @@ extension ViewController {
                                 forSupplementaryViewOfKind: ViewController.listSectionHeaderElementKind,
                                 withReuseIdentifier: TitleSupplementaryView.reuseIdentifier)
         view.addSubview(collectionView)
-    }
-}
-
-extension ViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch ViewController.Section(rawValue: indexPath.section) {
-        case .stories:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoriesCell.reuseIdentifier, for: indexPath) as? StoriesCell else {
-                fatalError("Invalid cell")
-            }
-            cell.usernameLabel.text = "tomoki_sun"
-            cell.imageView.layer.cornerRadius = cell.contentView.frame.width / 2
-            return cell
-        case .timeline:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextCell.reuseIdentifier, for: indexPath) as? TextCell else {
-                fatalError("Invalid cell")
-            }
-            cell.label.text = "\(indexPath.section):\(indexPath.row)"
-            cell.label.backgroundColor = .systemRed
-            return cell
-        default:
-            fatalError("invalid case")
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let suppolementaryView = collectionView.dequeueReusableSupplementaryView( ofKind: kind, withReuseIdentifier: TitleSupplementaryView.reuseIdentifier, for: indexPath) as? TitleSupplementaryView else {
-                fatalError("Cannot create new supplementary")
-        }
-        let viewKind = kind == ViewController.gridSectionHeaderElementKind ? "ストーリーズ" : "タイムライン"
-        suppolementaryView.label.text = viewKind
-        return suppolementaryView
+        
+        _ = dataSource
     }
 }
