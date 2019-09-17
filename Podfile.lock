@@ -1,0 +1,16 @@
+PODS:
+  - IBPCollectionViewCompositionalLayout (0.6.6)
+
+DEPENDENCIES:
+  - IBPCollectionViewCompositionalLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IBPCollectionViewCompositionalLayout
+
+SPEC CHECKSUMS:
+  IBPCollectionViewCompositionalLayout: 65967f7f7f99409684d54b26be21ef877e1913da
+
+PODFILE CHECKSUM: abb98d455ba959c8b2f9709cbb76ef098bf73cd2
+
+COCOAPODS: 1.7.5
