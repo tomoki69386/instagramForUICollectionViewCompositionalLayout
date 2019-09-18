@@ -8,5 +8,6 @@ target 'NewTimelineTest' do
   # Pods for NewTimelineTest
 
   pod 'IBPCollectionViewCompositionalLayout'
+  pod 'RxDataSources'
 
 end
